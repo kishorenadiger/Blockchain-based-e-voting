@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { FootComponent } from './components/foot/foot.component';
+import { WtvComponent } from './components/wtv/wtv.component';
+import { GetinfoarmyComponent } from './components/getinfoarmy/getinfoarmy.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { FootComponent } from './components/foot/foot.component';
     HeaderComponent,
     BodyComponent,
     FootComponent,
+    WtvComponent,
+    GetinfoarmyComponent,
   ],
   imports: [
     BrowserModule,
