@@ -10,6 +10,7 @@ import { WtvComponent } from './components/wtv/wtv.component';
 import { GetinfoarmyComponent } from './components/getinfoarmy/getinfoarmy.component';
 import { OnclkarmyComponent } from './components/onclkarmy/onclkarmy.component';
 import { OnclknriComponent } from './components/onclknri/onclknri.component';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OnclknriComponent } from './components/onclknri/onclknri.component';
     GetinfoarmyComponent,
     OnclkarmyComponent,
     OnclknriComponent,
+    AdminloginComponent,
   ],
   imports: [
     BrowserModule,
