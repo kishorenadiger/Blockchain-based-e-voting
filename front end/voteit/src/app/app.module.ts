@@ -8,6 +8,8 @@ import { BodyComponent } from './components/body/body.component';
 import { FootComponent } from './components/foot/foot.component';
 import { WtvComponent } from './components/wtv/wtv.component';
 import { GetinfoarmyComponent } from './components/getinfoarmy/getinfoarmy.component';
+import { OnclkarmyComponent } from './components/onclkarmy/onclkarmy.component';
+import { OnclknriComponent } from './components/onclknri/onclknri.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { GetinfoarmyComponent } from './components/getinfoarmy/getinfoarmy.compo
     FootComponent,
     WtvComponent,
     GetinfoarmyComponent,
+    OnclkarmyComponent,
+    OnclknriComponent,
   ],
   imports: [
     BrowserModule,
