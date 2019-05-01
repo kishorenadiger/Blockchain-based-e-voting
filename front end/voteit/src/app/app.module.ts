@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 import { Observable } from 'rxjs';
 import 'rxjs/add/observable/of';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -51,9 +52,11 @@ import { VoteComponent } from './components/vote/vote.component';
       { path :'admin',component : AdminloginComponent },
       { path :'vote',component : VoteComponent },
       {path: 'getdetails', component : GetdetailsComponent},
+      {path: 'details', component : GetinfoarmyComponent},
+
       { path: '', component : HomeComponent }
 
-    ]), BrowserAnimationsModule
+    ]), BrowserAnimationsModule,HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

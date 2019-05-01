@@ -7,16 +7,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./adminlogin.component.scss']
 })
 export class AdminloginComponent implements OnInit {
+  myForm: FormGroup; 
 
-   
-  ngOnInit() {
-  }
-  checkadmin()
-  {
-    // if (i==0) {
-      
-    // } else {
-      
-    // }
-  }
+constructor(private fb: FormBuilder) { }
+
+ngOnInit() {
+  this.myForm = this.fb.group({
+    email:['',[Validators.pattern('admin')]],
+    password: ['', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.pattern('12345')
+    ]],
+  })
+}
+get email() {
+  return this.myForm.get('email');
+}
+
+get password() {
+  return this.myForm.get('password');
+}
+
+
 }

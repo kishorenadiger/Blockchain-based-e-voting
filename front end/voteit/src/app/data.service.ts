@@ -1,5 +1,7 @@
 
 import { Injectable } from '@angular/core';
+import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
+
 import { HttpClient } from '@angular/common/http';
 import {  Subject, throwError} from 'rxjs';
 import { Observable } from 'rxjs';
@@ -10,6 +12,7 @@ import { catchError } from 'rxjs/operators';
 
 
 @Injectable()
+
 export class DataService<Type> {
     private resolveSuffix = '?resolve=true';
     private actionUrl: string;
@@ -79,3 +82,5 @@ export class DataService<Type> {
     }
 
 }
+
+
