@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
-
+import { Observable } from 'rxjs';
+import 'rxjs/add/observable/of';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
