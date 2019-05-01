@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,8 @@ import { componentHostSyntheticProperty } from '@angular/core/src/render3';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { GetdetailsComponent } from './components/getdetails/getdetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VoteComponent } from './components/vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +36,11 @@ import { GetdetailsComponent } from './components/getdetails/getdetails.componen
     AboutComponent,
     HomeComponent,
     GetdetailsComponent,
+    VoteComponent,
     
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,FormsModule,ReactiveFormsModule,
     AppRoutingModule,RouterModule.forRoot([
       { path :'home' , component : HomeComponent},
       { path :'about' ,component : AboutComponent},
@@ -43,7 +48,11 @@ import { GetdetailsComponent } from './components/getdetails/getdetails.componen
       { path :'wantovote/nri',component : OnclknriComponent },
       { path :'wantovote' , component : WtvComponent},
       { path :'admin',component : AdminloginComponent },
-    ])
+      { path :'vote',component : VoteComponent },
+      {path: 'getdetails', component : GetdetailsComponent},
+      { path: '', component : HomeComponent }
+
+    ]), BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

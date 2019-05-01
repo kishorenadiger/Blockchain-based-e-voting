@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-adminlogin',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminloginComponent implements OnInit {
 
-  constructor() { }
-
+   
   ngOnInit() {
   }
-
+  checkadmin()
+  {
+    // if (i==0) {
+      
+    // } else {
+      
+    // }
+  }
 }
