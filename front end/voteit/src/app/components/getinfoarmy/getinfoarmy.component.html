@@ -5,40 +5,43 @@
             
         </div>
         <div class="col-sm-8">
-            <form (ngSubmit)="onSubmit()" >
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone else.</small>
                 <div class="form-group">
                   <label for="name"><h4>Enter name</h4></label>
-                  <input type="text" (input)="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                  <input type="text" name="name"   ngModel required  #first="ngModel"  class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
                 </div>
                 <div class="form-group">
                   <label for="em"><h4>Enter email</h4></label>
-                  <input type="email" (input)="email" class="form-control" id="em" placeholder="email">
+                  <input type="email"  ngModel name="em" class="form-control" id="em" placeholder="email" >
                 </div>
                 <div class="form-group">
-                    <label for="em"><h4>Enter phone number</h4></label>
-                    <input type="email" (input)="phno" class="form-control" id="em" placeholder="ph no">
+                    <label for="vid"><h4>Enter Voter ID</h4></label>
+                    <input type="text" ngModel name="vid" class="form-control" id="vid" placeholder="Voter ID" >
                 </div>
-                <div class="form-group form-radio" (input)="sex">
+                <div class="form-group form-radio">
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-primary ">
-                      <input type="radio" name="gen" id="" autocomplete="off" checked>male
+                      <input type="radio" ngModel name="gen" id="" value="male" autocomplete="off" checked>male
                     </label>
                     <label class="btn btn-primary">
-                      <input type="radio" name="gen" id="" autocomplete="off">female
+                      <input type="radio" ngModel name="gen" value="female" id="" autocomplete="off">female
                     </label>
                     
                   </div>
                   <div class="form-group">
-                      <label for=""><h4>address</h4></label>
-                      <textarea (input)="addr" class="form-control" name="" id="" rows="3"></textarea>
+                      <label for="addr"><h4>address</h4></label>
+                      <textarea class="form-control" ngModel name="addr" id="addr" rows="3" ></textarea>
                     </div>
                 </div>
-                <button class="btn btn-lg btn-outline-primary" routerLink="/details">Submit</button>
-              </form>
+                <button class="btn btn-lg btn-outline-primary" >Submit</button>
+                <button type="button"class="btn btn-lg btn-outline-primary"  routerLink="/admin">new</button>
+              </form>   
+               <p *ngIf="onSubmit.valid">Form value: {{ f.value | json }}</p>
+
+             
         </div>
         <div class="col-sm-2">
-            
         </div>
                  
     </div>
