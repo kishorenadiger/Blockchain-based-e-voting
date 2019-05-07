@@ -22,7 +22,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { GetdetailsComponent } from './components/getdetails/getdetails.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VoteComponent } from './components/vote/vote.component';
+// import { VoteComponent } from './components/vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { VoteComponent } from './components/vote/vote.component';
     AboutComponent,
     HomeComponent,
     GetdetailsComponent,
-    VoteComponent,
+    // VoteComponent,
     
   ],
   imports: [
@@ -50,7 +50,7 @@ import { VoteComponent } from './components/vote/vote.component';
       { path :'wantovote/nri',component : OnclknriComponent },
       { path :'wantovote' , component : WtvComponent},
       { path :'admin',component : AdminloginComponent },
-      { path :'vote',component : VoteComponent },
+      // { path :'vote',component : VoteComponent },
       {path: 'getdetails', component : GetdetailsComponent},
       {path: 'details', component : GetinfoarmyComponent},
 
